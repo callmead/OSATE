@@ -1,0 +1,22 @@
+package UserInterface
+public
+	with SEI;
+	device UserInput
+		features
+			ui_out: out data port;
+		flows 
+			ui_source: flow source ui_out;
+		properties
+			SEI::NetWeight => 0.5kg;
+	end UserInput;
+	
+	device UserDisplay
+		features
+			ud_in: in data port;
+		flows
+			ud_sink: flow sink ud_in;
+		properties
+			SEI::NetWeight => 0.5kg;
+	end UserDisplay;
+
+end UserInterface;

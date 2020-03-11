@@ -1,0 +1,21 @@
+package CarSystem
+public
+	with SEI;
+	bus EthernetBus
+		features 
+			EthBs: requires bus access NetworkBus;
+
+	end EthernetBus;
+	
+	bus NetworkBus
+		features
+			NetBs: requires bus access EthernetBus;			
+	end NetworkBus;
+
+	bus implementation NetworkBus.impl
+		properties
+			SEI::BandWidthCapacity => 100.0MBytesps;
+		
+	end NetworkBus.impl;
+	
+end CarSystem;

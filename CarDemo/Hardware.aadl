@@ -1,0 +1,43 @@
+package Hardware
+public
+	with SEI;
+	processor CarProcessor
+		-- because the requirement does not specify any feature so no feature
+		--features
+			--cp_in: in data port; 
+			--cp_out: out data port; 		
+		properties 
+			SEI::NetWeight=>0.5kg;
+	end CarProcessor;
+
+	memory CarMemory
+		-- because the requirement does not specify any feature so no feature
+		--features
+			--cm_in: in data port;
+			--cm_out: out data port;
+		properties 
+			SEI::NetWeight=>0.5kg;			
+	end CarMemory;
+	
+	bus CarBus
+		-- because the requirement does not specify any feature so no feature
+		--features
+			--cb_in: in data port;
+			--cb_out: out data port;
+		properties 
+			SEI::NetWeight=>1.0kg;			
+	end CarBus;
+	
+	device Actuator
+		features
+			c_in: in data port;
+		--flows sink 
+		flows
+			ta_sink: flow sink c_in{
+				Latency => 15Ms .. 15Ms;
+			};
+		properties
+			SEI::NetWeight => 2.0kg;
+	end Actuator;
+	
+end Hardware;

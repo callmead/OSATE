@@ -1,0 +1,30 @@
+package SoftwareApps
+public
+	with CarSystemProcesses;
+	
+	--implementing cruise control
+	system CruiseControl
+		features
+			cc_ui: in data port; -- input from user on or off
+			cc_ud: out data port; -- output to display if cruise is on or off, status indicator
+			
+			cc_wrs: in data port; --input from Wheel Rotation Sensor to monitor speed
+			cc_cs: out data port; --outputs a control signal(speed difference error) to throttle actuator
+			cc_mbp: in data port; --input from Brake pedal for state 
+		
+		--Flow path
+		flows
+			Flow_W_T: flow path cc_wrs -> cc_cs{
+				Latency => 20Ms .. 20Ms;
+			};
+			
+	end CruiseControl;
+	
+	--Added the process implementation in order to use the processes defined. 
+	system implementation CruiseControl.impl
+		subcomponents 
+			cc_process: process CarSystemProcesses::CruiseControlProcess.impl;
+			
+	end CruiseControl.impl;
+
+end SoftwareApps;

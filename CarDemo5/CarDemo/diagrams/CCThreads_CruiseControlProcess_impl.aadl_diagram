@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="4">
+  <element id="0" manual="true" background="#ffffff">
+    <element id="6">
+      <element id="28">
+        <bo>
+          <seg>pvg</seg>
+          <seg>communication_properties::timing</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>d1</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="23">
+      <element id="32">
+        <bo>
+          <seg>pvg</seg>
+          <seg>communication_properties::timing</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>d2</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="21">
+      <element id="31">
+        <bo>
+          <seg>pvg</seg>
+          <seg>communication_properties::timing</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>d3</seg>
+      </bo>
+      <bendpoints>
+        <point x="1488.0" y="262.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element id="14">
+      <element id="30">
+        <bo>
+          <seg>pvg</seg>
+          <seg>communication_properties::timing</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>d4</seg>
+      </bo>
+      <bendpoints>
+        <point x="1016.0" y="173.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element id="12">
+      <element id="29">
+        <bo>
+          <seg>pvg</seg>
+          <seg>communication_properties::timing</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>d5</seg>
+      </bo>
+      <bendpoints>
+        <point x="994.0" y="234.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element id="26">
+      <element id="33">
+        <bo>
+          <seg>pvg</seg>
+          <seg>communication_properties::timing</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>d6</seg>
+      </bo>
+      <bendpoints>
+        <point x="2039.0" y="145.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element id="5" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>brake_pedal</seg>
+      </bo>
+      <position y="142.0"/>
+      <contentFilters/>
+    </element>
+    <element id="4" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>throttle_setting</seg>
+      </bo>
+      <position x="1088.0" y="31.0"/>
+      <contentFilters/>
+    </element>
+    <element id="25" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>wheel_pulses</seg>
+      </bo>
+      <position y="31.0"/>
+      <contentFilters/>
+    </element>
+    <element id="83">
+      <bo>
+        <seg>flow_specification</seg>
+        <seg>flow_b_t</seg>
+      </bo>
+      <bendpoints>
+        <point x="964.0" y="322.0"/>
+        <point x="1515.0" y="322.0"/>
+        <point x="1988.0" y="322.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element id="77" background="#ff0000" fontColor="#0000ff">
+      <bo>
+        <seg>flow_specification</seg>
+        <seg>flow_w_t</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="1">
+      <element id="3" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>actual_velocity</seg>
+        </bo>
+        <position y="20.0"/>
+        <contentFilters/>
+      </element>
+      <element id="2" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>output_velocity</seg>
+        </bo>
+        <position x="167.0" y="20.0"/>
+        <contentFilters/>
+      </element>
+      <element id="46">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>flow_w_t</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>compute_desired_speed</seg>
+      </bo>
+      <position x="490.0" y="100.0"/>
+      <size width="281.0" height="71.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element id="8">
+      <element id="10" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>brake_pedal</seg>
+        </bo>
+        <position y="70.0"/>
+        <contentFilters/>
+      </element>
+      <element id="11" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>output_velocity</seg>
+        </bo>
+        <position y="22.0"/>
+        <contentFilters/>
+      </element>
+      <element id="9" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>throttle_setting</seg>
+        </bo>
+        <position x="128.0" y="31.0"/>
+        <contentFilters/>
+      </element>
+      <element id="50">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>flow_b_t</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <element id="49">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>flow_w_t</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>compute_throttle_setting</seg>
+      </bo>
+      <position x="840.0" y="101.0"/>
+      <size width="241.0" height="121.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element id="16">
+      <element id="19" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>actual_velocity</seg>
+        </bo>
+        <position x="182.0" y="22.0"/>
+        <contentFilters/>
+      </element>
+      <element id="17" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>brake_pedal_in</seg>
+        </bo>
+        <position y="70.0"/>
+        <contentFilters/>
+      </element>
+      <element id="18" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>brake_pedal_out</seg>
+        </bo>
+        <position x="171.0" y="70.0"/>
+        <contentFilters/>
+      </element>
+      <element id="20" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>wheel_pulses</seg>
+        </bo>
+        <position y="22.0"/>
+        <contentFilters/>
+      </element>
+      <element id="52">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>flow_b_t</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <element id="51">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>flow_w_t</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>scan_input_ports</seg>
+      </bo>
+      <position x="130.0" y="100.0"/>
+      <size width="295.0" height="123.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>cruisecontrolprocess.impl</seg>
+    </bo>
+    <position x="890.0" y="60.0"/>
+    <size width="1201.0" height="286.0"/>
+    <contentFilters>
+      <filter>features</filter>
+      <filter>internalFeatures</filter>
+      <filter>processorFeatures</filter>
+      <filter>connections</filter>
+      <filter>flowSpecifications</filter>
+      <filter>subcomponents</filter>
+    </contentFilters>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>ccthreads::cruisecontrolprocess.impl</seg>
+    </context>
+  </config>
+</diagram:Diagram>

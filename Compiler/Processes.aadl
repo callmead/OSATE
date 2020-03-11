@@ -1,0 +1,37 @@
+package Processes
+public
+	with Threads;
+	process ControlExecution
+		features
+			sla: in data port;
+			sp: in data port;
+			ssa: in data port;
+			sis: in data port;
+			sra: in data port;
+			scg: in data port;
+			ga: in data port;
+			
+
+	end ControlExecution;
+	process implementation ControlExecution.impl
+		subcomponents 
+			ScanLA: thread Threads::ScanLexicalAnalysis;
+			ScanP: thread Threads::ScanParsing;
+			ScanSA: thread Threads::ScanSemanticAnalysis;
+			ScanIS: thread Threads::ScanInstructionSelection;
+			ScanRA: thread Threads::ScanRegisterAllocations;
+			ScanCG: thread Threads::ScanCodeGenerator;
+			GenAsmbly: thread Threads::GenerateAssembly;
+			
+		connections
+			ScanLACon: port sla -> ScanLA.sla;
+			ScanPCon: port sp -> ScanP.sp;
+			ScanSACon: port ssa -> ScanSA.ssa;
+			ScanISCon: port sis -> ScanIS.sis;
+			ScanRACon: port sra -> ScanRA.sra;
+			ScanCGCon: port scg -> ScanCG.scg;
+			GenAsmblyCon: port ga -> GenAsmbly.ga;
+			
+	end ControlExecution.impl;
+
+end Processes;

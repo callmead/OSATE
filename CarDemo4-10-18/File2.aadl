@@ -1,0 +1,37 @@
+package File2
+public
+	with SEI;
+	memory sys_mem
+		features
+			ExtBs: requires bus access VMEBus;
+			
+	end sys_mem;
+	memory RAM
+		properties
+			SEI::RAMCapacity => 4096.0 Bytes;
+	end RAM;
+	memory ROM
+		properties
+			SEI::RAMCapacity => 4096.0 Bytes;		
+	end ROM;
+	
+	memory implementation sys_mem.impl
+		subcomponents 
+			RAM: memory; 
+			ROM: memory;
+	end sys_mem.impl;
+	
+	bus VMEBus
+
+	end VMEBus;
+	
+	processor p1
+		--features 
+			--USB_Port: provides bus access USB20;
+			 
+	end p1;
+	processor implementation P1.impl
+			
+	end P1.impl;
+
+end File2;

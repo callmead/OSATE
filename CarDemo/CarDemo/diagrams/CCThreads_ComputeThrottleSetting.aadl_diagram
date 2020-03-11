@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="4">
+  <element id="0" manual="true">
+    <element id="3" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>brake_pedal</seg>
+      </bo>
+      <position y="81.0"/>
+      <contentFilters/>
+    </element>
+    <element id="4" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>output_velocity</seg>
+      </bo>
+      <position y="31.0"/>
+      <contentFilters/>
+    </element>
+    <element id="1" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>throttle_setting</seg>
+      </bo>
+      <position x="328.0" y="31.0"/>
+      <contentFilters/>
+    </element>
+    <element id="5">
+      <bo>
+        <seg>flow_specification</seg>
+        <seg>flow_b_t</seg>
+      </bo>
+      <bendpoints>
+        <point x="148.0" y="125.0"/>
+        <point x="321.0" y="125.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element id="2">
+      <bo>
+        <seg>flow_specification</seg>
+        <seg>flow_w_t</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>computethrottlesetting</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="441.0" height="149.0"/>
+    <contentFilters>
+      <filter>features</filter>
+      <filter>flowSpecifications</filter>
+    </contentFilters>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>ccthreads::computethrottlesetting</seg>
+    </context>
+  </config>
+</diagram:Diagram>

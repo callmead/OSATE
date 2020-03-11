@@ -1,0 +1,13 @@
+Weight totals Report
+
+Warning! bs: [L] No net weight plus subcomponent weight or no gross weight
+R1: [L] Sum of weights / gross weight is 0.100 kg (no limit specified)
+pr: [L] Sum of weights / gross weight is 0.600 kg (no limit specified)
+Warning! la: [L] No net weight plus subcomponent weight or no gross weight
+Warning! p: [L] No net weight plus subcomponent weight or no gross weight
+Warning! sa: [L] No net weight plus subcomponent weight or no gross weight
+Warning! isl: [L] No net weight plus subcomponent weight or no gross weight
+Warning! ra: [L] No net weight plus subcomponent weight or no gross weight
+Warning! cg: [L] No net weight plus subcomponent weight or no gross weight
+Warning! al: [L] No net weight plus subcomponent weight or no gross weight
+CompilerSystem_impl_Instance: [A] Sum of weights (0.600 kg) is below weight limit of 1.000 kg (40.0 % Weight slack)

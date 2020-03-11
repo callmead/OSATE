@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="4">
+  <element id="0" manual="true">
+    <element id="6">
+      <element id="7">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cc_mcu_impl_new_connection</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="2">
+      <element id="3" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>nbs</seg>
+        </bo>
+        <position x="158.0" y="20.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>ethernet</seg>
+      </bo>
+      <position x="58.0" y="208.0"/>
+      <size width="203.0" height="86.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element id="4">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>network</seg>
+      </bo>
+      <position x="288.0" y="138.0"/>
+      <size width="192.0" height="60.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>cc_mcu.impl</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="519.0" height="429.0"/>
+    <contentFilters>
+      <filter>features</filter>
+      <filter>internalFeatures</filter>
+      <filter>processorFeatures</filter>
+      <filter>connections</filter>
+      <filter>flowSpecifications</filter>
+      <filter>subcomponents</filter>
+    </contentFilters>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>hardwareplatform::cc_mcu.impl</seg>
+    </context>
+  </config>
+</diagram:Diagram>

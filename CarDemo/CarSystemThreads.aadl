@@ -1,0 +1,40 @@
+package CarSystemThreads
+public
+
+	--Added Thread (tasks) for the system
+	thread ScanInputPorts
+		features
+			wheel_pulse: in data port;
+			brake_pedal_in: in data port;
+			actual_velocity: out data port;
+			brake_pedal_out: out data port;
+		--adding properties for the threads now
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 5Ms;
+			Compute_Execution_Time => 3Ms .. 3Ms;
+			
+	end ScanInputPorts;
+	
+	thread ComputeDesiredSpeed
+		features
+			actual_velocity: in data port;
+			output_velocity: out data port;
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 10Ms;
+			Compute_Execution_Time => 2Ms .. 2Ms;			
+	end ComputeDesiredSpeed;
+	
+	thread ComputeThrottleSettings
+		features
+			output_velocity: in data port;
+			brake_pedal: in data port;
+			throttle_settings: out data port;
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 5Ms;
+			Compute_Execution_Time => 3Ms .. 3Ms;			
+	end ComputeThrottleSettings;
+	
+end CarSystemThreads;

@@ -1,0 +1,43 @@
+package HardwarePlatform
+public
+	with SEI;
+
+	with HardwareParts;
+	system cc_mcu
+		features
+			CanBA: provides bus access HardwareParts::CANBus;
+		properties
+			SEI::grossweight => 10.0kg;
+	end cc_mcu;
+	
+	system implementation cc_mcu.single
+		subcomponents
+			my_cpu: processor HardwareParts::PowerPC.single;
+			my_PCI: bus HardwareParts::PCI;
+			my_CANBus: bus HardwareParts::CANBus;
+			my_RAM: memory HardwareParts::RAM;
+			my_ROM: memory HardwareParts::ROM;
+		connections
+			cc_mcu_single_new_connection: bus access my_cpu.PCIBA <-> my_PCI;
+			cc_mcu_single_new_connection2: bus access my_ROM.PCIBA <-> my_PCI;
+			cc_mcu_single_new_connection3: bus access my_RAM.PCIBA <-> my_PCI;
+			cc_mcu_single_new_connection4: bus access my_cpu.CANBA <-> my_CANBus;
+			cc_mcu_single_new_connection5: bus access CanBA -> my_CANBus;
+	end cc_mcu.single;
+
+		system implementation cc_mcu.dual
+		subcomponents
+			my_cpu: processor HardwareParts::PowerPC.dual;
+			my_PCI: bus HardwareParts::PCI;
+			my_CANBus: bus HardwareParts::CANBus;
+			my_RAM: memory HardwareParts::RAM;
+			my_ROM: memory HardwareParts::ROM;
+		connections
+			cc_mcu_dual_new_connection2: bus access my_cpu.PCIBA <-> my_PCI;
+			cc_mcu_dual_new_connection3: bus access my_RAM.PCIBA <-> my_PCI;
+			cc_mcu_dual_new_connection4: bus access my_ROM.PCIBA <-> my_PCI;
+			cc_mcu_dual_new_connection5: bus access my_cpu.CANBA <-> my_CANBus;
+			cc_mcu_dual_new_connection: bus access CanBA -> my_CANBus;
+	end cc_mcu.dual;
+
+end HardwarePlatform;

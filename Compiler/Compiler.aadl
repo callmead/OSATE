@@ -1,0 +1,49 @@
+package Compiler
+public
+	with Modules, Hardware, Processes;
+
+	with SEI;
+	
+	system CompilerSystem
+		properties
+			SEI::WeightLimit=>1.0kg;		
+	end CompilerSystem;
+	
+	system implementation CompilerSystem.impl
+		subcomponents
+			la: system Modules::LexicalAnalysis.impl;
+			p: system Modules::Parsing.impl;
+			sa: system Modules::SemanticAnalysis.impl;
+			isl: system Modules::InstructionSelection.impl; --"is" is a keyword so not able to use, therefore used isl  
+			ra: system Modules::RegisterAllocations.impl;
+			cg: system Modules::CodeGenerator.impl;
+			al: system Modules::AssemblyLinking.impl;
+			pr: processor Hardware::P1.impl;
+			bs: bus Hardware::B1.impl;
+			pc: process Processes::ControlExecution.impl;
+		
+		connections
+			--assigning connections
+			c1: port la.la_out -> p.p_in;
+			c2: port p.p_out -> sa.sa_in;
+			c3: port sa.sa_out -> isl.is_in;
+			c4: port isl.is_out -> ra.ra_in;
+			c5: port ra.ra_out -> cg.cg_in;
+			c6: port cg.cg_out -> al.al_in;
+			
+			--assigning bus access
+			bus_la: bus access bs -> la.la_bus;
+			bus_p: bus access bs -> p.p_bus;
+			bus_sa: bus access bs -> sa.sa_bus;
+			bus_isl: bus access bs -> isl.is_bus;
+			bus_ra: bus access bs -> ra.ra_bus;
+			bus_cg: bus access bs -> cg.cg_bus;
+			bus_al: bus access bs -> al.al_bus;
+			bus_pr: bus access bs -> pr.p1_bus; 
+			
+	end CompilerSystem.impl;
+
+
+
+
+end Compiler;

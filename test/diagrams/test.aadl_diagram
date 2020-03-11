@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="3">
+  <element id="0" manual="true" autoContentsFilter="allow_fundamental">
+    <element id="1" manual="true" autoContentsFilter="allow_fundamental">
+      <bo>
+        <seg>classifier</seg>
+        <seg>uav</seg>
+      </bo>
+      <position x="38.0" y="48.0"/>
+      <size width="381.0" height="171.0"/>
+    </element>
+    <element id="2" manual="true" autoContentsFilter="allow_fundamental">
+      <element id="3" autoContentsFilter="allow_fundamental">
+        <bo>
+          <seg>realization</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>uav.impl</seg>
+      </bo>
+      <position x="408.0" y="248.0"/>
+      <size width="186.0" height="61.0"/>
+    </element>
+    <bo>
+      <seg>package</seg>
+      <seg>test</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="619.0" height="359.0"/>
+  </element>
+  <config>
+    <enabledAadlProperties/>
+    <context>
+      <seg>package</seg>
+      <seg>test</seg>
+    </context>
+  </config>
+</diagram:Diagram>

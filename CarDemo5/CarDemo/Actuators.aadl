@@ -1,0 +1,15 @@
+package Actuators
+public
+	with SEI;
+
+	device ThrottleActuator
+		features
+			ta_cc: in data port;
+		flows
+			ta_sink: flow sink ta_cc {
+						Latency => 15Ms .. 15Ms;
+					};
+		properties
+			SEI::NetWeight => 2.0kg;
+	end ThrottleActuator;
+end Actuators;

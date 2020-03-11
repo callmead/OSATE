@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="3">
+  <element id="0" manual="true" autoContentsFilter="allow_fundamental">
+    <element id="9" manual="true" autoContentsFilter="allow_fundamental">
+      <element id="13" autoContentsFilter="allow_fundamental">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>d1</seg>
+      </bo>
+      <bendpoints>
+        <point x="95.0" y="196.0"/>
+        <point x="95.0" y="255.0"/>
+      </bendpoints>
+      <primaryLabelPosition x="20.0" y="24.0"/>
+    </element>
+    <element id="8" manual="true" autoContentsFilter="allow_fundamental">
+      <element id="14" autoContentsFilter="allow_fundamental">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>d2</seg>
+      </bo>
+      <bendpoints>
+        <point x="105.0" y="146.0"/>
+        <point x="105.0" y="205.0"/>
+      </bendpoints>
+      <primaryLabelPosition x="10.0" y="34.0"/>
+    </element>
+    <element id="10" manual="true" autoContentsFilter="allow_fundamental">
+      <element id="15" autoContentsFilter="allow_fundamental">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>d3</seg>
+      </bo>
+      <bendpoints>
+        <point x="2321.0" y="205.0"/>
+        <point x="2321.0" y="146.0"/>
+      </bendpoints>
+      <primaryLabelPosition x="-40.0" y="26.0"/>
+    </element>
+    <element id="5" manual="true" autoContentsFilter="allow_fundamental" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>cc_bp</seg>
+      </bo>
+      <position y="102.0"/>
+    </element>
+    <element id="6" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>cc_ta</seg>
+      </bo>
+      <position x="2335.0" y="102.0"/>
+    </element>
+    <element id="3" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>cc_ud</seg>
+      </bo>
+      <position x="2331.0" y="52.0"/>
+    </element>
+    <element id="2" manual="true" autoContentsFilter="allow_fundamental" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>cc_ui</seg>
+      </bo>
+      <position y="52.0"/>
+    </element>
+    <element id="4" manual="true" autoContentsFilter="allow_fundamental" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>cc_wrs</seg>
+      </bo>
+      <position y="152.0"/>
+    </element>
+    <element id="11" manual="true" autoContentsFilter="allow_fundamental">
+      <bo>
+        <seg>flow_specification</seg>
+        <seg>flow_cc_bp_cc_ta</seg>
+      </bo>
+      <bendpoints>
+        <point x="105.0" y="146.0"/>
+        <point x="105.0" y="100.0"/>
+        <point x="2321.0" y="100.0"/>
+        <point x="2321.0" y="146.0"/>
+      </bendpoints>
+      <primaryLabelPosition x="-67.5" y="-36.0"/>
+    </element>
+    <element id="12" manual="true" autoContentsFilter="allow_fundamental">
+      <bo>
+        <seg>flow_specification</seg>
+        <seg>flow_cc_wrs_cc_ta</seg>
+      </bo>
+      <bendpoints>
+        <point x="95.0" y="196.0"/>
+        <point x="95.0" y="565.0"/>
+        <point x="2321.0" y="565.0"/>
+        <point x="2321.0" y="146.0"/>
+      </bendpoints>
+      <primaryLabelPosition x="-96.0" y="-9.0"/>
+    </element>
+    <element id="1" autoContentsFilter="allow_fundamental">
+      <bo>
+        <seg>realization</seg>
+      </bo>
+    </element>
+    <element id="7" manual="true" autoContentsFilter="allow_type">
+      <element id="22" manual="true" autoContentsFilter="allow_fundamental">
+        <element id="2">
+          <bo>
+            <seg>pvg</seg>
+            <seg>communication_properties::timing</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>d1</seg>
+        </bo>
+        <primaryLabelPosition x="-17.5" y="3.0"/>
+      </element>
+      <element id="23" manual="true" autoContentsFilter="allow_fundamental">
+        <element id="6">
+          <bo>
+            <seg>pvg</seg>
+            <seg>communication_properties::timing</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>d2</seg>
+        </bo>
+        <primaryLabelPosition x="-17.5" y="3.0"/>
+      </element>
+      <element id="24" manual="true" autoContentsFilter="allow_fundamental">
+        <element id="5">
+          <bo>
+            <seg>pvg</seg>
+            <seg>communication_properties::timing</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>d3</seg>
+        </bo>
+        <bendpoints>
+          <point x="865.0" y="299.0"/>
+          <point x="865.0" y="220.0"/>
+          <point x="1519.0" y="220.0"/>
+          <point x="1519.0" y="399.0"/>
+        </bendpoints>
+        <primaryLabelPosition x="-67.5" y="3.0"/>
+      </element>
+      <element id="25" manual="true" autoContentsFilter="allow_fundamental">
+        <element id="4">
+          <bo>
+            <seg>pvg</seg>
+            <seg>communication_properties::timing</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>d4</seg>
+        </bo>
+        <bendpoints>
+          <point x="291.0" y="255.0"/>
+          <point x="291.0" y="349.0"/>
+        </bendpoints>
+        <primaryLabelPosition x="20.0" y="60.5"/>
+      </element>
+      <element id="26" manual="true" autoContentsFilter="allow_fundamental">
+        <element id="3">
+          <bo>
+            <seg>pvg</seg>
+            <seg>communication_properties::timing</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>d5</seg>
+        </bo>
+        <bendpoints>
+          <point x="301.0" y="205.0"/>
+          <point x="301.0" y="299.0"/>
+        </bendpoints>
+        <primaryLabelPosition x="10.0" y="70.5"/>
+      </element>
+      <element id="27" manual="true" autoContentsFilter="allow_fundamental">
+        <element id="7">
+          <bo>
+            <seg>pvg</seg>
+            <seg>communication_properties::timing</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>d6</seg>
+        </bo>
+        <bendpoints>
+          <point x="2126.0" y="349.0"/>
+          <point x="2126.0" y="205.0"/>
+        </bendpoints>
+        <primaryLabelPosition x="-45.0" y="95.0"/>
+      </element>
+      <element id="17" manual="true" autoContentsFilter="allow_fundamental" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>brake_pedal</seg>
+        </bo>
+        <position y="52.0"/>
+      </element>
+      <element id="18" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>throttle_setting</seg>
+        </bo>
+        <position x="1983.0" y="52.0"/>
+      </element>
+      <element id="16" manual="true" autoContentsFilter="allow_fundamental" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>wheel_pulses</seg>
+        </bo>
+        <position y="102.0"/>
+      </element>
+      <element id="28" manual="true" autoContentsFilter="allow_fundamental">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>flow_bp_ts</seg>
+        </bo>
+        <bendpoints>
+          <point x="301.0" y="205.0"/>
+          <point x="301.0" y="204.0"/>
+          <point x="2126.0" y="204.0"/>
+          <point x="2126.0" y="205.0"/>
+        </bendpoints>
+        <primaryLabelPosition x="-219.5" y="-133.0"/>
+      </element>
+      <element id="29" manual="true" autoContentsFilter="allow_fundamental">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>flow_wp_ts</seg>
+        </bo>
+        <bendpoints>
+          <point x="291.0" y="255.0"/>
+          <point x="291.0" y="508.0"/>
+          <point x="2126.0" y="508.0"/>
+          <point x="2126.0" y="205.0"/>
+        </bendpoints>
+        <primaryLabelPosition x="-246.5" y="-106.0"/>
+      </element>
+      <element id="20" manual="true" autoContentsFilter="allow_type">
+        <element id="37" manual="true" autoContentsFilter="allow_fundamental" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>actual_velocity</seg>
+          </bo>
+          <position y="52.0"/>
+        </element>
+        <element id="38" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+          <bo>
+            <seg>feature</seg>
+            <seg>output_velocity</seg>
+          </bo>
+          <position x="410.0" y="52.0"/>
+        </element>
+        <element id="39" manual="true" autoContentsFilter="allow_fundamental">
+          <bo>
+            <seg>flow_specification</seg>
+            <seg>flow_av_ov</seg>
+          </bo>
+          <bendpoints>
+            <point x="1065.0" y="349.0"/>
+            <point x="1065.0" y="382.0"/>
+            <point x="1178.0" y="382.0"/>
+            <point x="1178.0" y="349.0"/>
+          </bendpoints>
+          <primaryLabelPosition x="-868.0" y="-127.0"/>
+        </element>
+        <element id="40" manual="true" autoContentsFilter="allow_fundamental">
+          <bo>
+            <seg>tag</seg>
+            <seg>sc_type</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>compute_desired_speed</seg>
+        </bo>
+        <position x="765.0" y="144.0"/>
+        <size width="524.0" height="157.0"/>
+      </element>
+      <element id="21" manual="true" autoContentsFilter="allow_type">
+        <element id="42" manual="true" autoContentsFilter="allow_fundamental" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>brake_pedal</seg>
+          </bo>
+          <position y="102.0"/>
+        </element>
+        <element id="41" manual="true" autoContentsFilter="allow_fundamental" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>output_velocity</seg>
+          </bo>
+          <position y="52.0"/>
+        </element>
+        <element id="43" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+          <bo>
+            <seg>feature</seg>
+            <seg>throttle_setting</seg>
+          </bo>
+          <position x="419.0" y="52.0"/>
+        </element>
+        <element id="45" manual="true" autoContentsFilter="allow_fundamental">
+          <bo>
+            <seg>flow_specification</seg>
+            <seg>flow_bp_ts</seg>
+          </bo>
+          <bendpoints>
+            <point x="1665.0" y="399.0"/>
+            <point x="1665.0" y="458.0"/>
+            <point x="1777.0" y="458.0"/>
+            <point x="1777.0" y="349.0"/>
+          </bendpoints>
+          <primaryLabelPosition x="-1465.5" y="-98.0"/>
+        </element>
+        <element id="44" manual="true" autoContentsFilter="allow_fundamental">
+          <bo>
+            <seg>flow_specification</seg>
+            <seg>flow_ov_ts</seg>
+          </bo>
+          <bendpoints>
+            <point x="1665.0" y="349.0"/>
+            <point x="1665.0" y="382.0"/>
+            <point x="1777.0" y="382.0"/>
+            <point x="1777.0" y="349.0"/>
+          </bendpoints>
+          <primaryLabelPosition x="-1466.0" y="-150.0"/>
+        </element>
+        <element id="46" manual="true" autoContentsFilter="allow_fundamental">
+          <bo>
+            <seg>tag</seg>
+            <seg>sc_type</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>compute_throttle_setting</seg>
+        </bo>
+        <position x="1364.0" y="144.0"/>
+        <size width="532.0" height="233.0"/>
+      </element>
+      <element id="19" manual="true" autoContentsFilter="allow_type">
+        <element id="49" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+          <bo>
+            <seg>feature</seg>
+            <seg>actual_velocity</seg>
+          </bo>
+          <position x="376.0" y="102.0"/>
+        </element>
+        <element id="48" manual="true" autoContentsFilter="allow_fundamental" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>brake_pedal_in</seg>
+          </bo>
+          <position y="52.0"/>
+        </element>
+        <element id="50" manual="true" autoContentsFilter="allow_fundamental" dockArea="right">
+          <bo>
+            <seg>feature</seg>
+            <seg>brake_pedal_out</seg>
+          </bo>
+          <position x="365.0" y="52.0"/>
+        </element>
+        <element id="47" manual="true" autoContentsFilter="allow_fundamental" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>wheel_pulses</seg>
+          </bo>
+          <position y="102.0"/>
+        </element>
+        <element id="51" manual="true" autoContentsFilter="allow_fundamental">
+          <bo>
+            <seg>flow_specification</seg>
+            <seg>flow_bp_in_bp_out</seg>
+          </bo>
+          <bendpoints>
+            <point x="504.0" y="299.0"/>
+            <point x="504.0" y="332.0"/>
+            <point x="672.0" y="332.0"/>
+            <point x="672.0" y="299.0"/>
+          </bendpoints>
+          <primaryLabelPosition x="-297.5" y="-118.0"/>
+        </element>
+        <element id="52" manual="true" autoContentsFilter="allow_fundamental">
+          <bo>
+            <seg>flow_specification</seg>
+            <seg>flow_wp_av</seg>
+          </bo>
+          <bendpoints>
+            <point x="504.0" y="349.0"/>
+            <point x="504.0" y="408.0"/>
+            <point x="672.0" y="408.0"/>
+            <point x="672.0" y="349.0"/>
+          </bendpoints>
+          <primaryLabelPosition x="-271.5" y="-91.0"/>
+        </element>
+        <element id="53" manual="true" autoContentsFilter="allow_fundamental">
+          <bo>
+            <seg>tag</seg>
+            <seg>sc_type</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>scan_input_ports</seg>
+        </bo>
+        <position x="201.0" y="94.0"/>
+        <size width="489.0" height="233.0"/>
+      </element>
+      <element id="30" manual="true" autoContentsFilter="allow_fundamental">
+        <bo>
+          <seg>tag</seg>
+          <seg>sc_type</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>cc_process</seg>
+      </bo>
+      <position x="153.0" y="109.0"/>
+      <size width="2096.0" height="424.0"/>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>cruisecontrol.impl</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="2386.0" height="590.0"/>
+  </element>
+  <config>
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>softwareapps::cruisecontrol.impl</seg>
+    </context>
+  </config>
+</diagram:Diagram>

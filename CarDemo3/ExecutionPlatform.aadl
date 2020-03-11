@@ -1,0 +1,13 @@
+package ExecutionPlatform
+public
+	with SEI;
+	bus CANBus
+		properties
+			SEI::WeightLimit=>1.0kg;
+	end CANBus;
+	bus implementation CANBus.impl
+		properties
+			SEI::BandWidthCapacity => 10.0kbytesps;		
+		
+	end CANBus.impl;
+end ExecutionPlatform;

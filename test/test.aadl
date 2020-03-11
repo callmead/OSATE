@@ -1,0 +1,13 @@
+package test
+public
+	
+system UAV
+	end UAV;
+
+	
+system implementation UAV.impl
+	end UAV.impl;
+
+
+	
+end test;

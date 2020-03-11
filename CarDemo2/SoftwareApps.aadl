@@ -1,0 +1,33 @@
+package SoftwareApps
+public
+	with CCThreads;
+
+	system CruiseControl
+		features
+			cc_ui: in data port;
+			cc_ud: out data port;
+			cc_wrs: in data port;
+			cc_bp: in data port;
+			cc_ta: out data port;
+		--added code below
+		flows
+			--Add flow latency
+			flow_cc_bp_cc_ta: flow path cc_bp -> cc_ta	{
+				latency => 15Ms .. 20Ms;
+			};	
+			
+			flow_cc_wrs_cc_ta: flow path cc_wrs -> cc_ta{
+				latency => 15Ms .. 20Ms;
+			};
+	end CruiseControl;
+
+	system implementation CruiseControl.impl
+		subcomponents
+			cc_process: process CCThreads::CruiseControlProcess.impl;
+		connections
+			d2: port cc_bp -> cc_process.brake_pedal;
+			d1: port cc_wrs -> cc_process.wheel_pulses;
+			d3: port cc_process.throttle_setting -> cc_ta;
+
+	end CruiseControl.impl;
+end SoftwareApps;

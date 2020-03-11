@@ -1,0 +1,16 @@
+package Sensors
+public
+	with SEI;
+	device WheelRotationSensor
+		features
+			swrs_out: out data port;
+		--Adding flow source 
+		flows
+			wrs_source: flow source swrs_out{
+				Latency => 5Ms .. 5Ms;
+			};
+		properties 
+			SEI::NetWeight=>0.25kg;		
+	end WheelRotationSensor;
+
+end Sensors;

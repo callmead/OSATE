@@ -1,0 +1,72 @@
+package Threads
+public
+	thread ScanLexicalAnalysis
+		features
+			sla: in data port;
+			sla_out: out data port;
+		properties
+			Dispatch_Protocol => periodic;
+			Period => 1Ms;
+			Compute_Execution_Time => 5Ms..5Ms;
+	end ScanLexicalAnalysis;
+
+	thread ScanParsing
+		features
+			sp: in data port;
+			sp_out: out data port;		
+		properties
+			Dispatch_Protocol => periodic;
+			Period => 1Ms;
+			Compute_Execution_Time => 5Ms..5Ms;			
+	end ScanParsing;
+	
+	thread ScanSemanticAnalysis
+		features
+			ssa: in data port;		
+			ssa_out: out data port;
+		properties
+			Dispatch_Protocol => periodic;
+			Period => 1Ms;
+			Compute_Execution_Time => 5Ms..5Ms;			
+	end ScanSemanticAnalysis;
+	
+	thread ScanInstructionSelection
+		features
+			sis: in data port;		
+			sis_out: out data port;
+		properties
+			Dispatch_Protocol => periodic;
+			Period => 1Ms;
+			Compute_Execution_Time => 5Ms..5Ms;			
+	end ScanInstructionSelection;
+	
+	thread ScanRegisterAllocations
+		features
+			sra: in data port;	
+			sra_out: out data port;
+		properties
+			Dispatch_Protocol => periodic;
+			Period => 1Ms;
+			Compute_Execution_Time => 5Ms..5Ms;				
+	end ScanRegisterAllocations;
+	
+	thread ScanCodeGenerator
+		features
+			scg: in data port;		
+			scg_out: out data port;
+		properties
+			Dispatch_Protocol => periodic;
+			Period => 1Ms;
+			Compute_Execution_Time => 5Ms..5Ms;			
+	end ScanCodeGenerator;
+	
+	thread GenerateAssembly
+		features
+			ga: in data port;
+			ga_out: out data port;		
+		properties
+			Dispatch_Protocol => periodic;
+			Period => 1Ms;
+			Compute_Execution_Time => 5Ms..5Ms;			
+	end GenerateAssembly;
+end Threads;

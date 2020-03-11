@@ -1,0 +1,21 @@
+package CarSystemProcesses
+public
+	with CarSystemThreads;
+	--creating processes to organize threads...
+	process CruiseControlProcess
+		features
+			wheel_pulses: in data port;
+			brake_pedal: in data port;
+			throttle_setting: out data port;
+	end CruiseControlProcess;
+	
+	--creating a process to organize the threads
+	process implementation CruiseControlProcess.impl 
+		subcomponents
+			scan_input_ports: thread CarSystemThreads::ScanInputPorts;
+			compute_desired_speed: thread CarSystemThreads::ComputeDesiredSpeed;
+			compute_throttle_settings: thread CarSystemThreads::ComputeThrottleSettings;
+			
+	end CruiseControlProcess.impl;
+	
+end CarSystemProcesses;

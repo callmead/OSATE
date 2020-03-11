@@ -1,0 +1,17 @@
+Bound Resource Budget Analysis Report
+
+
+Processor Summary Report: 
+**   Processor cc_mcu.my_cpu: Total MIPS 1.400 GIPS of bound tasks exceeds MIPS capacity 1.000 GIPS
+
+Memory Summary Report: 
+  No Memory with Memory_Size or RAMCapacity or ROMCapacity
+
+
+Detailed Workload Report:  for Processor cc_mcu.my_cpu with Capacity 1.000 GIPS
+
+Component,Budget,Actual
+thread cc.cc_process.scan_input_ports, 0.000 MIPS,600.000 MIPS,
+thread cc.cc_process.compute_desired_speed, 0.000 MIPS,200.000 MIPS,
+thread cc.cc_process.compute_throttle_setting, 0.000 MIPS,600.000 MIPS,
+Total,,1.400 GIPS

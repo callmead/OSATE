@@ -1,0 +1,50 @@
+package CarSystem
+public
+	
+	with SEI;
+	with UserInterface;
+	with SoftwareApps;
+
+	with Sensors;
+	with CarComponents;
+
+	with Hardware;
+	
+	system MyCar
+		properties
+			SEI::WeightLimit=>10.0kg;
+			
+	end MyCar;
+	
+	--implement systems for car
+	system implementation myCar.impl --implementing is myCar.impl
+		subcomponents
+			ui: device UserInterface::UserInput;
+			ud: device UserInterface::UserDisplay;
+			cc: system SoftwareApps::CruiseControl.impl;
+			
+			ss: device Sensors::WheelRotationSensor;
+			cs: device CarComponents::BrakePedal;
+			
+			ac: device Hardware::Actuator;
+			
+		--adding connections between components	 	
+		connections
+			c1: port ui.ui_out -> cc.cc_ui;
+			c2: port cs.cs_out -> cc.cc_mbp;
+			c3: port ss.swrs_out -> cc.cc_wrs;
+			c4: port cc.cc_cs -> ac.c_in;
+			c5: port cc.cc_ud -> ud.ud_in;
+	end myCar.impl;
+
+end CarSystem;
+
+-- Step 1 Creating diagram -> on the outline, RC on myCar.impl and create diagram
+-- to perform analysis you should have an implementation 
+-- Step 2 RC on myCar.impl and select instantiate 
+-- this will create a folder instances on the project folder.
+-- Step 3 select the instance from the project explorer on left and goto Analysis menu, Budget, Calculate weight totals
+-- Step 3 will create a folder reports, and an excel file inside
+-- if you make a change, re-instantiate and perform step 3 again.
+-- After creating and organizing diagrams, save them and do not create diagram next time, simply open them from diagrams folder
+-- Generate report of flow analysis after flows are complete. After end to end flow. 

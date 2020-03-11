@@ -1,0 +1,30 @@
+Resource Budget Analysis Report
+
+Resource Summary: 
+**   System MyCar_impl_Instance budgets over capacity: MIPS capacity 1.000 GIPS : MIPS budget 1.400 GIPS
+  1 out of 1 with MIPS capacity
+  5 out of 5 with MIPS budget
+
+
+
+Detailed Processor MIPS Capacity Report 
+
+Component,Capacity
+processor cc_mcu.my_cpu, 1.000 GIPS,
+Total, 1.000 GIPS,
+
+
+Detailed MIPS Budget Report 
+
+Component,Budget,Actual,Notes
+device ui, 0.000 MIPS,0.000 MIPS,
+device ud, 0.000 MIPS,0.000 MIPS,
+device wrs, 0.000 MIPS,0.000 MIPS,
+device bp, 0.000 MIPS,0.000 MIPS,
+device act, 0.000 MIPS,0.000 MIPS,
+    thread cc.cc_process.scan_input_ports,     0.000 MIPS,    600.000 MIPS,
+    thread cc.cc_process.compute_desired_speed,     0.000 MIPS,    200.000 MIPS,
+    thread cc.cc_process.compute_throttle_setting,     0.000 MIPS,    600.000 MIPS,
+  process cc.cc_process,   1.200 GIPS,  1.400 GIPS,Error: subtotal/actual exceeds budget 1200.000 by 200.000 MIPS
+system cc, 0.000 MIPS,1.400 GIPS,
+Total, ,1400.000 MIPS,

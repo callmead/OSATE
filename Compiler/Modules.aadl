@@ -1,0 +1,88 @@
+package Modules
+public
+	with Hardware;
+	system LexicalAnalysis
+		features
+			la_out: out data port;
+			la_bus: requires bus access Hardware::B1; 
+		properties
+			none;
+	end LexicalAnalysis;
+	system implementation LexicalAnalysis.impl
+		--subcomponents 
+			--la_process: process CompilerSystemProcess ::  
+			
+	end LexicalAnalysis.impl;
+	
+	system Parsing
+		features
+			p_in: in data port;
+			p_out: out data port;
+			p_bus: requires bus access Hardware::B1;
+		properties
+			none;
+	end Parsing;
+	system implementation Parsing.impl
+		--subcomponents
+	end Parsing.impl;
+	
+	system SemanticAnalysis
+		features
+			sa_in: in data port;
+			sa_out: out data port;
+			sa_bus: requires bus access Hardware::B1;
+		properties
+			none;
+	end SemanticAnalysis;
+	system implementation SemanticAnalysis.impl
+		--subcomponents
+	end SemanticAnalysis.impl;
+	
+	system InstructionSelection
+		features
+			is_in: in data port;
+			is_out: out data port;
+			is_bus: requires bus access Hardware::B1;
+		properties
+			none;
+	end InstructionSelection;
+	system implementation InstructionSelection.impl
+		--subcomponents
+	end InstructionSelection.impl;
+	
+	system RegisterAllocations
+		features
+			ra_in: in data port;
+			ra_out: out data port;
+			ra_bus: requires bus access Hardware::B1;
+		properties
+			none;
+	end RegisterAllocations;
+	system implementation RegisterAllocations.impl
+		--subcomponents
+	end RegisterAllocations.impl;
+	
+	system CodeGenerator
+		features
+			cg_in: in data port;
+			cg_out: out data port;
+			cg_bus: requires bus access Hardware::B1;
+		properties
+			none;			
+	end CodeGenerator;
+	system implementation CodeGenerator.impl
+		--subcomponents
+	end CodeGenerator.impl;
+	
+	system AssemblyLinking
+		features
+			al_in: in data port;
+			al_bus: requires bus access Hardware::B1;
+		properties
+			none;			
+	end AssemblyLinking;
+	system implementation AssemblyLinking.impl
+		--subcomponents 
+	end AssemblyLinking.impl;
+
+end Modules;

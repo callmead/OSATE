@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="ASCII"?>
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="CompilerSystem_impl_Instance" category="system">
+  <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+    <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.WeightLimit"/>
+    <ownedValue>
+      <ownedValue xsi:type="aadl2:RealLiteral" value="1.0">
+        <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+      </ownedValue>
+    </ownedValue>
+    <propertyAssociation href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+  </ownedPropertyAssociation>
+  <componentInstance name="bs" category="bus">
+    <subcomponent xsi:type="aadl2:BusSubcomponent" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:BusImplementation" href="../Hardware.aadl#Hardware.B1.impl"/>
+  </componentInstance>
+  <componentInstance name="pc" category="process">
+    <featureInstance name="sla">
+      <feature xsi:type="aadl2:DataPort" href="../Processes.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="sp">
+      <feature xsi:type="aadl2:DataPort" href="../Processes.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="ssa">
+      <feature xsi:type="aadl2:DataPort" href="../Processes.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.2"/>
+    </featureInstance>
+    <featureInstance name="sis">
+      <feature xsi:type="aadl2:DataPort" href="../Processes.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.3"/>
+    </featureInstance>
+    <featureInstance name="sra">
+      <feature xsi:type="aadl2:DataPort" href="../Processes.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.4"/>
+    </featureInstance>
+    <featureInstance name="scg">
+      <feature xsi:type="aadl2:DataPort" href="../Processes.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.5"/>
+    </featureInstance>
+    <featureInstance name="ga">
+      <feature xsi:type="aadl2:DataPort" href="../Processes.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.6"/>
+    </featureInstance>
+    <componentInstance name="ScanLA" category="thread">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+            <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="5">
+              <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="5">
+              <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="sla">
+        <feature xsi:type="aadl2:DataPort" href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="sla_out" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Processes.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadType" href="../Threads.aadl#Threads.ScanLexicalAnalysis"/>
+    </componentInstance>
+    <componentInstance name="ScanP" category="thread">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+            <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="5">
+              <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="5">
+              <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="sp">
+        <feature xsi:type="aadl2:DataPort" href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="sp_out" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDataPort.1"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Processes.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.1"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadType" href="../Threads.aadl#Threads.ScanParsing"/>
+    </componentInstance>
+    <componentInstance name="ScanSA" category="thread">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+            <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="5">
+              <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="5">
+              <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="ssa">
+        <feature xsi:type="aadl2:DataPort" href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="ssa_out" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.1"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Processes.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.2"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadType" href="../Threads.aadl#Threads.ScanSemanticAnalysis"/>
+    </componentInstance>
+    <componentInstance name="ScanIS" category="thread">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+            <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="5">
+              <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="5">
+              <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="sis">
+        <feature xsi:type="aadl2:DataPort" href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="sis_out" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.1"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Processes.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.3"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadType" href="../Threads.aadl#Threads.ScanInstructionSelection"/>
+    </componentInstance>
+    <componentInstance name="ScanRA" category="thread">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+            <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="5">
+              <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="5">
+              <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="sra">
+        <feature xsi:type="aadl2:DataPort" href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="sra_out" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.1"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Processes.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.4"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadType" href="../Threads.aadl#Threads.ScanRegisterAllocations"/>
+    </componentInstance>
+    <componentInstance name="ScanCG" category="thread">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+            <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="5">
+              <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="5">
+              <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="scg">
+        <feature xsi:type="aadl2:DataPort" href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="scg_out" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.1"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Processes.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.5"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadType" href="../Threads.aadl#Threads.ScanCodeGenerator"/>
+    </componentInstance>
+    <componentInstance name="GenAsmbly" category="thread">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+            <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="5">
+              <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="5">
+              <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="ga">
+        <feature xsi:type="aadl2:DataPort" href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="ga_out" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../Threads.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.1"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Processes.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.6"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadType" href="../Threads.aadl#Threads.GenerateAssembly"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../Processes.aadl#Processes.ControlExecution.impl"/>
+  </componentInstance>
+  <componentInstance name="pr" category="processor">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.NetWeight"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="0.5">
+          <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <featureInstance name="p1_bus" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedBusAccess.0"/>
+    </featureInstance>
+    <componentInstance name="R1" category="memory">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.NetWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.1">
+            <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedMemorySubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:MemoryType" href="../Hardware.aadl#Hardware.RAM"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessorSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessorImplementation" href="../Hardware.aadl#Hardware.P1.impl"/>
+  </componentInstance>
+  <componentInstance name="la" category="system">
+    <featureInstance name="la_bus" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../Modules.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedBusAccess.0"/>
+    </featureInstance>
+    <featureInstance name="la_out" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../Modules.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:SystemImplementation" href="../Modules.aadl#Modules.LexicalAnalysis.impl"/>
+  </componentInstance>
+  <componentInstance name="p" category="system">
+    <featureInstance name="p_bus" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../Modules.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedBusAccess.0"/>
+    </featureInstance>
+    <featureInstance name="p_in">
+      <feature xsi:type="aadl2:DataPort" href="../Modules.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="p_out" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../Modules.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.1"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.1"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:SystemImplementation" href="../Modules.aadl#Modules.Parsing.impl"/>
+  </componentInstance>
+  <componentInstance name="sa" category="system">
+    <featureInstance name="sa_bus" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../Modules.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedBusAccess.0"/>
+    </featureInstance>
+    <featureInstance name="sa_in">
+      <feature xsi:type="aadl2:DataPort" href="../Modules.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="sa_out" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../Modules.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.1"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.2"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:SystemImplementation" href="../Modules.aadl#Modules.SemanticAnalysis.impl"/>
+  </componentInstance>
+  <componentInstance name="isl" category="system">
+    <featureInstance name="is_bus" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../Modules.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.0"/>
+    </featureInstance>
+    <featureInstance name="is_in">
+      <feature xsi:type="aadl2:DataPort" href="../Modules.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="is_out" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../Modules.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.1"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.3"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:SystemImplementation" href="../Modules.aadl#Modules.InstructionSelection.impl"/>
+  </componentInstance>
+  <componentInstance name="ra" category="system">
+    <featureInstance name="ra_bus" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../Modules.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.0"/>
+    </featureInstance>
+    <featureInstance name="ra_in">
+      <feature xsi:type="aadl2:DataPort" href="../Modules.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="ra_out" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../Modules.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.1"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.4"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:SystemImplementation" href="../Modules.aadl#Modules.RegisterAllocations.impl"/>
+  </componentInstance>
+  <componentInstance name="cg" category="system">
+    <featureInstance name="cg_bus" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../Modules.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedBusAccess.0"/>
+    </featureInstance>
+    <featureInstance name="cg_in">
+      <feature xsi:type="aadl2:DataPort" href="../Modules.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="cg_out" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../Modules.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDataPort.1"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.5"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:SystemImplementation" href="../Modules.aadl#Modules.CodeGenerator.impl"/>
+  </componentInstance>
+  <componentInstance name="al" category="system">
+    <featureInstance name="al_bus" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../Modules.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedBusAccess.0"/>
+    </featureInstance>
+    <featureInstance name="al_in">
+      <feature xsi:type="aadl2:DataPort" href="../Modules.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedDataPort.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.6"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:SystemImplementation" href="../Modules.aadl#Modules.AssemblyLinking.impl"/>
+  </componentInstance>
+  <connectionInstance name="bs -> la.la_bus" complete="true" kind="accessConnection" destination="//@componentInstance.3/@featureInstance.0" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.3/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bs -> p.p_bus" complete="true" kind="accessConnection" destination="//@componentInstance.4/@featureInstance.0" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.4/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.1"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bs -> sa.sa_bus" complete="true" kind="accessConnection" destination="//@componentInstance.5/@featureInstance.0" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.5/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bs -> isl.is_bus" complete="true" kind="accessConnection" destination="//@componentInstance.6/@featureInstance.0" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.6/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bs -> ra.ra_bus" complete="true" kind="accessConnection" destination="//@componentInstance.7/@featureInstance.0" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.7/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bs -> cg.cg_bus" complete="true" kind="accessConnection" destination="//@componentInstance.8/@featureInstance.0" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.8/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.5"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bs -> al.al_bus" complete="true" kind="accessConnection" destination="//@componentInstance.9/@featureInstance.0" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.9/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.6"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bs -> pr.p1_bus" complete="true" kind="accessConnection" destination="//@componentInstance.2/@featureInstance.0" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.2/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.7"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="la.la_out -> p.p_in" complete="true" kind="portConnection" destination="//@componentInstance.4/@featureInstance.1" source="//@componentInstance.3/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.3/@featureInstance.1" destination="//@componentInstance.4/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="p.p_out -> sa.sa_in" complete="true" kind="portConnection" destination="//@componentInstance.5/@featureInstance.1" source="//@componentInstance.4/@featureInstance.2">
+    <connectionReference context="/" source="//@componentInstance.4/@featureInstance.2" destination="//@componentInstance.5/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.1"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="sa.sa_out -> isl.is_in" complete="true" kind="portConnection" destination="//@componentInstance.6/@featureInstance.1" source="//@componentInstance.5/@featureInstance.2">
+    <connectionReference context="/" source="//@componentInstance.5/@featureInstance.2" destination="//@componentInstance.6/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="isl.is_out -> ra.ra_in" complete="true" kind="portConnection" destination="//@componentInstance.7/@featureInstance.1" source="//@componentInstance.6/@featureInstance.2">
+    <connectionReference context="/" source="//@componentInstance.6/@featureInstance.2" destination="//@componentInstance.7/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="ra.ra_out -> cg.cg_in" complete="true" kind="portConnection" destination="//@componentInstance.8/@featureInstance.1" source="//@componentInstance.7/@featureInstance.2">
+    <connectionReference context="/" source="//@componentInstance.7/@featureInstance.2" destination="//@componentInstance.8/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="cg.cg_out -> al.al_in" complete="true" kind="portConnection" destination="//@componentInstance.9/@featureInstance.1" source="//@componentInstance.8/@featureInstance.2">
+    <connectionReference context="/" source="//@componentInstance.8/@featureInstance.2" destination="//@componentInstance.9/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../Compiler.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.5"/>
+    </connectionReference>
+  </connectionInstance>
+  <systemOperationMode name="No Modes"/>
+  <componentImplementation xsi:type="aadl2:SystemImplementation" href="../Compiler.aadl#Compiler.CompilerSystem.impl"/>
+</instance:SystemInstance>

@@ -1,0 +1,26 @@
+package Sensors
+public
+	with SEI;
+
+	device WheelRotationSensor
+		features
+			wrs_cc: out data port;
+		flows
+			wrs_source: flow source wrs_cc {
+						Latency => 5Ms .. 5Ms;
+					};
+		properties
+			SEI::NetWeight => 0.25kg;
+	end WheelRotationSensor;
+
+	device BrakePedal
+		features
+			bp_cc: out data port;
+		flows
+			bp_source: flow source bp_cc {
+						Latency => 7Ms .. 7Ms;
+					};
+		properties
+			SEI::NetWeight => 0.25kg;
+	end BrakePedal;
+end Sensors;

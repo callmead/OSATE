@@ -1,0 +1,43 @@
+package SystemImplementation
+public
+	with SEI;
+	system myImpl
+		properties
+			SEI::WeightLimit=>10.0kg;
+			
+	end myImpl;
+	memory sys_mem
+		
+	end sys_mem;
+	memory RAM
+		properties
+			SEI::WeightLimit=>0.8kg;		
+	end RAM;	
+	memory ROM
+		properties
+			SEI::WeightLimit=>0.4kg;		
+	end ROM;
+	memory implementation sys_mem.impl
+		subcomponents
+			RAM: memory; 
+			ROM: memory;
+	end sys_mem.impl;
+	
+	bus CANBus
+		properties
+			SEI::WeightLimit=>1.3kg;
+			SEI::BandWidthCapacity =>10.0 kbytesps;	--maybe in implementation.
+	end CANBus;
+	bus PCIBus
+		properties
+			SEI::WeightLimit=>0.5kg;
+					
+	end PCIBus;
+	processor p1
+			
+	end p1;
+	processor implementation p1.impl
+			
+	end p1.impl;
+	
+end SystemImplementation;

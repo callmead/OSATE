@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="4">
+  <element id="0" manual="true">
+    <element id="11">
+      <bo>
+        <seg>connection</seg>
+        <seg>cc_mcu_single_new_connection</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="13">
+      <bo>
+        <seg>connection</seg>
+        <seg>cc_mcu_single_new_connection2</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="15">
+      <bo>
+        <seg>connection</seg>
+        <seg>cc_mcu_single_new_connection3</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="17">
+      <bo>
+        <seg>connection</seg>
+        <seg>cc_mcu_single_new_connection4</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="19">
+      <element id="20">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>cc_mcu_single_new_connection5</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="3" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>canba</seg>
+      </bo>
+      <position x="640.0" y="31.0"/>
+      <contentFilters/>
+    </element>
+    <element id="10">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>my_canbus</seg>
+      </bo>
+      <position x="488.0" y="108.0"/>
+      <size width="136.0" height="52.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element id="5">
+      <element id="6" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>canba</seg>
+        </bo>
+        <position y="30.0"/>
+        <contentFilters/>
+      </element>
+      <element id="7" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>pciba</seg>
+        </bo>
+        <position y="81.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>my_cpu</seg>
+      </bo>
+      <position x="454.0" y="268.0"/>
+      <size width="235.0" height="136.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element id="4">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>my_pci</seg>
+      </bo>
+      <position x="288.0" y="213.0"/>
+      <size width="108.0" height="52.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element id="8">
+      <element id="9" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>pciba</seg>
+        </bo>
+        <position x="98.0" y="36.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>my_ram</seg>
+      </bo>
+      <position x="88.0" y="128.0"/>
+      <size width="156.0" height="86.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element id="1">
+      <element id="2" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>pciba</seg>
+        </bo>
+        <position x="98.0" y="30.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>my_rom</seg>
+      </bo>
+      <position x="88.0" y="258.0"/>
+      <size width="156.0" height="86.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>cc_mcu.single</seg>
+    </bo>
+    <position x="60.0" y="12.0"/>
+    <size width="701.0" height="446.0"/>
+    <contentFilters>
+      <filter>features</filter>
+      <filter>internalFeatures</filter>
+      <filter>processorFeatures</filter>
+      <filter>connections</filter>
+      <filter>flowSpecifications</filter>
+      <filter>subcomponents</filter>
+    </contentFilters>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>hardwareplatform::cc_mcu.single</seg>
+    </context>
+  </config>
+</diagram:Diagram>

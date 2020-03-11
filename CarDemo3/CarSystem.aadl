@@ -1,0 +1,46 @@
+package CarSystem
+public
+	with SEI;
+
+	with UserInterface;
+
+	with SoftwareApps;
+
+	with Sensors;
+
+	with Actuators;
+
+	system MyCar
+		properties
+			SEI::WeightLimit => 1.0kg;
+	end MyCar;
+
+	system implementation MyCar.impl
+		subcomponents
+			ui: device UserInterface::UserInput;
+			ud: device UserInterface::UserDisplay;
+			cc: system SoftwareApps::CruiseControl.impl;
+			wrs: device Sensors::WheelRotationSensor;
+			bp: device Sensors::BrakePedal;
+			act: device Actuators::ThrottleActuator;
+		connections
+			c1: port ui.ui_out -> cc.cc_ui;
+			c2: port cc.cc_ud -> ud.ud_in;
+			c3: port wrs.wrs_cc -> cc.cc_wrs;
+			c4: port bp.bp_cc -> cc.cc_bp;
+			c5: port cc.cc_ta -> act.ta_cc;
+		flows
+--			Flow_CCUI_CCUD: end to end flow ui.ui_source ->
+--				c1 -> cc.Flow_CCUI_CCUD ->
+--				c2 -> ud.ud_sink;
+			Flow_CCWRS_CCTA: end to end flow wrs.wrs_source -> 
+				c3 -> cc.Flow_CCWRS_CCTA ->
+				c5 -> act.ta_sink 
+				{Latency => 40Ms..40Ms;};
+			Flow_CCBP_CCTA: end to end flow bp.bp_source ->
+				c4 -> cc.Flow_CCBP_CCTA ->
+				c5 -> act.ta_sink 
+				{Latency => 50Ms..50Ms;};
+	end MyCar.impl;
+
+end CarSystem;

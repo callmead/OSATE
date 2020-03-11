@@ -1,0 +1,27 @@
+package Hardware
+public
+	with SEI;
+	processor P1
+		features
+			p1_bus: requires bus access Hardware::B1;
+		properties
+			SEI::NetWeight=>0.5kg;			
+	end P1;
+	processor implementation P1.impl
+		subcomponents 
+			R1: memory RAM;	
+	end P1.impl;
+	
+	memory RAM
+		properties
+			SEI::NetWeight=>0.1kg;		
+	end RAM;
+	
+	bus B1
+		
+	end B1;
+	bus implementation B1.impl
+		
+	end B1.impl;
+
+end Hardware;

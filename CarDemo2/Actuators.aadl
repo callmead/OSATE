@@ -1,0 +1,12 @@
+package Actuators
+public
+	with SEI;
+
+	device ThrottleActuator
+		features
+			ta_cc: in data port;
+
+		properties
+			SEI::NetWeight => 2.0kg;
+	end ThrottleActuator;
+end Actuators;

@@ -1,0 +1,19 @@
+package CarComponents
+public
+	with SEI;
+	device Actuator
+		features
+			cs_in: in data port;
+		properties 
+			SEI::NetWeight=>2.0kg;
+	end Actuator;
+		
+	device BrakePedal
+		features
+			cs_out: out data port;
+		properties 
+			SEI::NetWeight=>0.3kg;
+	end BrakePedal;
+
+	
+end CarComponents;
